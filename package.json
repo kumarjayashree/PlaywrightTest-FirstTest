@@ -1,0 +1,21 @@
+{
+  "name": "testrunner",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devdependencies": {
+    "typescript": "5.3",
+    "ts-node": "10.9.2",
+    "playwright": "^1.45.3",
+    "@playwright/test": "1.45.3",
+    "undici-types": "^6.11.1"
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.45.3",
+    "@types/node": "^22.1.0"
+  }
+}
