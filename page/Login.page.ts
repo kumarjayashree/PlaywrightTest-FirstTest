@@ -59,6 +59,7 @@ export default class LoginPage {
     public async clickForgotPasswordBtn() {
         const eleForgot= await this.elementForgottenpasswordButton();
         eleForgot?.click();
+        console.log("Clicked on Forgot password");
     }
 
 
