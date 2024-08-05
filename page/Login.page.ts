@@ -35,6 +35,8 @@ export default class LoginPage {
         else
         throw new Error("No Login Button");*/
     elementLoginButton = async () => this.page.$("//button[text()='LOGIN']");
+
+    elementForgottenpasswordButton = async () => this.page.$("//button[contains(., 'Forgotten password')]");
     
     
 
@@ -53,6 +55,12 @@ export default class LoginPage {
         const eleLogin = await this.elementLoginButton();
         eleLogin?.click();
     }
+
+    public async clickForgotPasswordBtn() {
+        const eleForgot= await this.elementForgottenpasswordButton();
+        eleForgot?.click();
+    }
+
 
     public async performLogin(username:string, password:string) {
         await this.enterUserName(username);

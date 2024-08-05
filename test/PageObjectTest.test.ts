@@ -49,5 +49,22 @@ test.beforeAll( async ({browser}) => {
 
     })
 
+    test("Forgot password", async({page}) => {
+        await page.goto(EnvPOM.testUrl, {timeout:120000});
+        //my page creation
+        header = new HeaderPage(page);
+        login = new LoginPage(page);
+        common = new CommonFunctions(page);
+
+      // verification
+      expect(page.url()).toBe("https://letcode.in/");
+      await header.clickLoginLink();
+      expect(page.url()).toBe("https://letcode.in/signin");
+      await login.clickForgotPasswordBtn();
+      expect(page.$("//button[contains(., 'RESET')]")).toBeTruthy();
+
+
+    })
+
     })
    
