@@ -28,13 +28,18 @@ export default defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
     channel: "chrome",
     headless: false,
     video:"retry-with-video",
-    screenshot:"only-on-failure"
+    screenshot:"only-on-failure",
+
+    
 
   },
+
+ //grep: [new RegExp("@smoke")],
+// testMatch: ["fixtureTest.test.ts"],
 
   /* Configure projects for major browsers */
   projects: [
